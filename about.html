@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About | Roll &amp; Rally Board Games Club</title>
+  <meta name="description" content="What Roll & Rally does, when we meet, why we exist, and where to find us at Kansas State University.">
+  <link rel="stylesheet" href="stylesheet.css">
+  <script>
+    /* Apply saved settings before first paint to avoid a flash */
+    (function () {
+      try {
+        var theme = localStorage.getItem("theme");
+        if (!theme) {
+          theme = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+        document.documentElement.setAttribute("data-theme", theme);
+        if (localStorage.getItem("colorblind") === "on") {
+          document.documentElement.setAttribute("data-colorblind", "on");
+        }
+      } catch (e) {
+        document.documentElement.setAttribute("data-theme", "light");
+      }
+    })();
+  </script>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- FIXED NAVIGATION -->
+  <header class="site-header">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="homepage.html">
+        <span class="brand-icon" aria-hidden="true">♞</span>
+        <span class="brand-text">Roll &amp; Rally</span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="homepage.html">Home</a></li>
+        <li><a href="homepage.html#games">Games</a></li>
+        <li><a href="homepage.html#join">Join</a></li>
+        <li><a href="about.html" aria-current="page">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <!-- SETTINGS COG -->
+      <div class="settings">
+        <button class="settings-btn" id="settingsBtn" aria-label="Open settings" aria-expanded="false" aria-controls="settingsPanel">
+          <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false">
+            <path fill="currentColor" d="M19.43 12.98c.04-.32.07-.65.07-.98s-.03-.66-.07-.98l2.11-1.65a.5.5 0 0 0 .12-.64l-2-3.46a.5.5 0 0 0-.61-.22l-2.49 1a7.3 7.3 0 0 0-1.69-.98l-.38-2.65A.49.49 0 0 0 14 2h-4a.49.49 0 0 0-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1a.5.5 0 0 0-.61.22l-2 3.46a.5.5 0 0 0 .12.64l2.11 1.65c-.04.32-.07.65-.07.98s.03.66.07.98l-2.11 1.65a.5.5 0 0 0-.12.64l2 3.46c.13.22.39.31.61.22l2.49-1c.52.39 1.08.73 1.69.98l.38 2.65c.04.24.25.42.49.42h4c.24 0 .45-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.23.09.49 0 .61-.22l2-3.46a.5.5 0 0 0-.12-.64l-2.11-1.65zM12 15.5A3.5 3.5 0 1 1 12 8.5a3.5 3.5 0 0 1 0 7z"/>
+          </svg>
+        </button>
+
+        <div class="settings-panel" id="settingsPanel" role="dialog" aria-label="Settings" hidden>
+          <h2 class="settings-title">Settings</h2>
+
+          <button class="setting-option" id="themeToggle" type="button" aria-pressed="false">
+            <span class="setting-label">
+              <span class="setting-icon" id="themeIcon" aria-hidden="true">🌙</span>
+              <span id="themeLabel">Dark mode</span>
+            </span>
+            <span class="switch" aria-hidden="true"><span class="switch-knob"></span></span>
+          </button>
+
+          <button class="setting-option" id="colorblindToggle" type="button" aria-pressed="false">
+            <span class="setting-label">
+              <span class="setting-icon" aria-hidden="true">👁️</span>
+              <span>Colorblind mode: <strong id="cbState">Off</strong></span>
+            </span>
+            <span class="switch" aria-hidden="true"><span class="switch-knob"></span></span>
+          </button>
+
+          <p class="settings-note">Colorblind mode boosts contrast, adds borders, underlines, and patterns so nothing relies on color alone.</p>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- PAGE HERO -->
+    <section class="hero page-hero">
+      <div class="container hero-inner">
+        <p class="eyebrow">About the club</p>
+        <h1>Meet the <span class="highlight">squad.</span></h1>
+        <p class="hero-sub">We're a bunch of K-State students who believe the best study break is a board in the middle of the table and someone about to flip it.</p>
+      </div>
+    </section>
+
+    <!-- WHAT WE DO + MISSION -->
+    <section class="section">
+      <div class="container about-grid">
+        <article class="card">
+          <h2>What we do</h2>
+          <p>Roll &amp; Rally is a board games club for university students. We host regular game nights where you can learn something new, run it back with an old favorite, or just vibe with snacks while others play.</p>
+          <ul class="check-list">
+            <li><strong>Open tables:</strong> grab a seat, no experience needed.</li>
+            <li><strong>Game rotation:</strong> strategy classics, party chaos, and nostalgia picks.</li>
+            <li><strong>Teach-it-to-me nights:</strong> someone always knows the rules (and will explain them twice).</li>
+            <li><strong>Mini tournaments:</strong> bragging rights only, but the bragging is elite.</li>
+          </ul>
+        </article>
+
+        <article class="card mission-card">
+          <h2>Our mission</h2>
+          <blockquote class="mission">
+            To give every student a screen-free spot on campus to connect, compete, and laugh, where everyone belongs at the table, whether you're a grandmaster or still figuring out how the dice work.
+          </blockquote>
+          <p class="mission-points">
+            <span>🤝 Everyone's welcome</span>
+            <span>🎲 Play for the fun of it</span>
+            <span>🧠 Learn something new</span>
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- CALENDAR -->
+    <section class="section section-alt" id="calendar">
+      <div class="container">
+        <h2 class="section-title">When we meet</h2>
+        <p class="section-sub">Tap any day to see the deets. Meeting days are marked with an icon, so you never have to guess.</p>
+
+        <div class="calendar-wrap">
+          <div class="card calendar" aria-label="Meeting calendar">
+            <div class="cal-head">
+              <button class="cal-nav" id="calPrev" type="button" aria-label="Previous month">&#8249;</button>
+              <h3 class="cal-title" id="calTitle" aria-live="polite"></h3>
+              <button class="cal-nav" id="calNext" type="button" aria-label="Next month">&#8250;</button>
+            </div>
+            <div class="cal-weekdays" aria-hidden="true">
+              <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
+            </div>
+            <div class="cal-grid" id="calGrid" role="grid" aria-labelledby="calTitle"></div>
+
+            <ul class="cal-legend" aria-label="Calendar key">
+              <li><span class="key key-lib" aria-hidden="true">📚</span> Indoor game night (Hale Library)</li>
+              <li><span class="key key-out" aria-hidden="true">🌳</span> Outdoor day (weather permitting)</li>
+              <li><span class="key key-today" aria-hidden="true">●</span> Today</li>
+            </ul>
+            <button class="btn btn-secondary cal-today" id="calToday" type="button">Jump to today</button>
+          </div>
+
+          <aside class="card cal-detail" id="calDetail" aria-live="polite">
+            <p class="detail-date" id="detailDate"></p>
+            <h3 id="detailTitle"></h3>
+            <p id="detailTime" class="detail-time"></p>
+            <p id="detailPlace" class="detail-place"></p>
+            <p id="detailNote" class="detail-note"></p>
+            <a class="btn btn-primary" href="homepage.html#join">Join the club</a>
+          </aside>
+        </div>
+
+        <p class="fine-print">Schedule is the club's regular pattern. Times can shift around exams and breaks, so check back here for updates.</p>
+      </div>
+    </section>
+
+    <!-- STORY -->
+    <section class="section">
+      <div class="container story-wrap">
+        <article class="card story-card">
+          <h2>How the club started (a true-ish tale)</h2>
+          <p>It all began during a very serious group project meeting at Hale Library. Somebody pulled out a game "just for five minutes" to unwind. Forty-five minutes later, the project was untouched, a chess match had turned into a full-blown rivalry, and a librarian had politely asked us to "keep the dramatic gasps down."</p>
+          <p>Then came the Betrayal incident. One friend was revealed as the traitor, took it <em>extremely</em> personally, and didn't speak to the group until the next afternoon. Everyone agreed that this was the best night of the semester.</p>
+          <p>We figured campus needed more of that energy: low-stakes drama, high-stakes snacks, and zero notifications. So we made it official. And yes, the group project did eventually get finished, with a very sleepy A-minus.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- SPONSOR -->
+    <section class="section section-alt">
+      <div class="container sponsor-wrap">
+        <article class="card sponsor-card">
+          <div class="sponsor-badge" aria-hidden="true">🎓</div>
+          <div>
+            <p class="eyebrow">Project sponsor</p>
+            <h2>Professor Safia Malallah</h2>
+            <p class="sponsor-school">Kansas State University</p>
+            <p>This project is proudly sponsored by Professor Safia Malallah of Kansas State University. Huge thanks for backing a club that's all about bringing students together. We're so grateful, fr.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- LOCATION -->
+    <section class="section" id="location">
+      <div class="container">
+        <h2 class="section-title">Where to find us</h2>
+        <p class="section-sub">Two spots, depending on the day and the weather.</p>
+
+        <div class="location-grid">
+          <article class="card location-card">
+            <div class="loc-icon" aria-hidden="true">📚</div>
+            <h3>Hale Library</h3>
+            <p class="loc-sub">Our main spot · Kansas State University</p>
+            <p>Most game nights happen in a reserved room at Hale Library, so we've got space, tables, and no rain delays. We book ahead, and the exact room is shared with members before each meeting.</p>
+            <a class="btn btn-secondary" href="https://www.google.com/maps/search/?api=1&amp;query=Hale+Library+Kansas+State+University+Manhattan+KS" target="_blank" rel="noopener">Open in Maps<span class="sr-only"> (opens in a new tab)</span></a>
+          </article>
+
+          <article class="card location-card">
+            <div class="loc-icon" aria-hidden="true">🌳</div>
+            <h3>Outside on campus</h3>
+            <p class="loc-sub">When the weather's giving</p>
+            <p>On nice days we sometimes take the party outdoors for picnic-style games on the lawn. If the forecast turns on us, we move back inside to Hale Library. Members get the final call the day of.</p>
+            <a class="btn btn-secondary" href="contact.html">Ask about today's spot</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 Roll &amp; Rally Board Games Club</p>
+      <p><a href="about.html">About</a> &middot; <a href="contact.html">Contact</a></p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var root = document.documentElement;
+
+      function save(key, value) {
+        try { localStorage.setItem(key, value); } catch (e) {}
+      }
+
+      /* ---------- Mobile menu ---------- */
+      var menuToggle = document.getElementById("menuToggle");
+      var navLinks = document.getElementById("navLinks");
+      menuToggle.addEventListener("click", function () {
+        var open = navLinks.classList.toggle("open");
+        menuToggle.setAttribute("aria-expanded", String(open));
+      });
+      navLinks.addEventListener("click", function (e) {
+        if (e.target.tagName === "A") {
+          navLinks.classList.remove("open");
+          menuToggle.setAttribute("aria-expanded", "false");
+        }
+      });
+
+      /* ---------- Settings panel ---------- */
+      var settingsBtn = document.getElementById("settingsBtn");
+      var panel = document.getElementById("settingsPanel");
+
+      function setPanel(open) {
+        panel.hidden = !open;
+        settingsBtn.setAttribute("aria-expanded", String(open));
+        settingsBtn.classList.toggle("spin", open);
+      }
+      settingsBtn.addEventListener("click", function (e) {
+        e.stopPropagation();
+        setPanel(panel.hidden);
+      });
+      document.addEventListener("click", function (e) {
+        if (!panel.hidden && !panel.contains(e.target)) setPanel(false);
+      });
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape" && !panel.hidden) {
+          setPanel(false);
+          settingsBtn.focus();
+        }
+      });
+
+      /* Dark / light toggle */
+      var themeToggle = document.getElementById("themeToggle");
+      var themeLabel = document.getElementById("themeLabel");
+      var themeIcon = document.getElementById("themeIcon");
+
+      function syncTheme() {
+        var dark = root.getAttribute("data-theme") === "dark";
+        themeToggle.setAttribute("aria-pressed", String(dark));
+        themeLabel.textContent = dark ? "Light mode" : "Dark mode";
+        themeIcon.textContent = dark ? "☀️" : "🌙";
+      }
+      themeToggle.addEventListener("click", function () {
+        var next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+        root.setAttribute("data-theme", next);
+        save("theme", next);
+        syncTheme();
+      });
+      syncTheme();
+
+      /* Colorblind toggle */
+      var cbToggle = document.getElementById("colorblindToggle");
+      var cbState = document.getElementById("cbState");
+
+      function syncCb() {
+        var on = root.getAttribute("data-colorblind") === "on";
+        cbToggle.setAttribute("aria-pressed", String(on));
+        cbState.textContent = on ? "On" : "Off";
+      }
+      cbToggle.addEventListener("click", function () {
+        var on = root.getAttribute("data-colorblind") === "on";
+        if (on) {
+          root.removeAttribute("data-colorblind");
+          save("colorblind", "off");
+        } else {
+          root.setAttribute("data-colorblind", "on");
+          save("colorblind", "on");
+        }
+        syncCb();
+      });
+      syncCb();
+
+      /* ---------- Interactive calendar ----------
+         Regular pattern:
+           - Every Thursday: indoor game night, Hale Library, 6:00-9:00 PM
+           - First Saturday of each month: outdoor day, 1:00-4:00 PM (weather permitting)
+         Edit the two functions below to change the schedule. */
+      var MONTHS = ["January", "February", "March", "April", "May", "June", "July",
+                    "August", "September", "October", "November", "December"];
+      var DAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+      function meetingFor(date) {
+        var dow = date.getDay();
+        if (dow === 4) {
+          return {
+            type: "lib",
+            icon: "📚",
+            title: "Indoor game night",
+            time: "6:00 PM – 9:00 PM",
+            place: "Hale Library · reserved room",
+            note: "Room number gets shared with members before each meeting. Bring a friend, or make a new one."
+          };
+        }
+        if (dow === 6 && date.getDate() <= 7) {
+          return {
+            type: "out",
+            icon: "🌳",
+            title: "Outdoor game day",
+            time: "1:00 PM – 4:00 PM",
+            place: "On campus lawn · weather permitting",
+            note: "If the forecast flops, we move inside to Hale Library. Final call is posted the day of."
+          };
+        }
+        return null;
+      }
+
+      function nextMeeting(from) {
+        var d = new Date(from.getFullYear(), from.getMonth(), from.getDate());
+        for (var i = 0; i < 40; i++) {
+          if (meetingFor(d)) return new Date(d.getTime());
+          d.setDate(d.getDate() + 1);
+        }
+        return null;
+      }
+
+      function sameDay(a, b) {
+        return a.getFullYear() === b.getFullYear() && a.getMonth() === b.getMonth() && a.getDate() === b.getDate();
+      }
+
+      function fmt(d) {
+        return DAYS[d.getDay()] + ", " + MONTHS[d.getMonth()] + " " + d.getDate() + ", " + d.getFullYear();
+      }
+
+      var now = new Date();
+      var today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+      var viewYear = today.getFullYear();
+      var viewMonth = today.getMonth();
+      var selected = nextMeeting(today) || today;
+
+      var grid = document.getElementById("calGrid");
+      var title = document.getElementById("calTitle");
+      var dDate = document.getElementById("detailDate");
+      var dTitle = document.getElementById("detailTitle");
+      var dTime = document.getElementById("detailTime");
+      var dPlace = document.getElementById("detailPlace");
+      var dNote = document.getElementById("detailNote");
+
+      function showDetail(date) {
+        var m = meetingFor(date);
+        dDate.textContent = fmt(date);
+        if (m) {
+          dTitle.textContent = m.icon + " " + m.title;
+          dTime.textContent = "🕕 " + m.time;
+          dPlace.textContent = "📍 " + m.place;
+          dNote.textContent = m.note;
+        } else {
+          var nxt = nextMeeting(new Date(date.getFullYear(), date.getMonth(), date.getDate() + 1));
+          dTitle.textContent = "No meeting this day";
+          dTime.textContent = "";
+          dPlace.textContent = "";
+          dNote.textContent = nxt
+            ? "Next up: " + fmt(nxt) + ". Tap that day to see the deets."
+            : "Check back soon for the next meeting.";
+        }
+      }
+
+      function render() {
+        title.textContent = MONTHS[viewMonth] + " " + viewYear;
+        grid.innerHTML = "";
+
+        var first = new Date(viewYear, viewMonth, 1);
+        var daysInMonth = new Date(viewYear, viewMonth + 1, 0).getDate();
+
+        for (var b = 0; b < first.getDay(); b++) {
+          var blank = document.createElement("span");
+          blank.className = "cal-blank";
+          blank.setAttribute("aria-hidden", "true");
+          grid.appendChild(blank);
+        }
+
+        for (var day = 1; day <= daysInMonth; day++) {
+          var date = new Date(viewYear, viewMonth, day);
+          var m = meetingFor(date);
+          var btn = document.createElement("button");
+          btn.type = "button";
+          btn.className = "cal-day";
+          if (m) btn.classList.add("meet-" + m.type);
+          if (sameDay(date, today)) btn.classList.add("is-today");
+          if (sameDay(date, selected)) btn.classList.add("is-selected");
+
+          var label = fmt(date) + (m ? ", " + m.title : ", no meeting");
+          if (sameDay(date, today)) label += ", today";
+          btn.setAttribute("aria-label", label);
+          btn.setAttribute("aria-pressed", String(sameDay(date, selected)));
+
+          var num = document.createElement("span");
+          num.className = "cal-num";
+          num.textContent = day;
+          btn.appendChild(num);
+
+          if (m) {
+            var ic = document.createElement("span");
+            ic.className = "cal-icon";
+            ic.setAttribute("aria-hidden", "true");
+            ic.textContent = m.icon;
+            btn.appendChild(ic);
+          }
+
+          (function (d) {
+            btn.addEventListener("click", function () {
+              selected = d;
+              render();
+              showDetail(d);
+            });
+          })(date);
+
+          grid.appendChild(btn);
+        }
+      }
+
+      document.getElementById("calPrev").addEventListener("click", function () {
+        viewMonth--;
+        if (viewMonth < 0) { viewMonth = 11; viewYear--; }
+        render();
+      });
+      document.getElementById("calNext").addEventListener("click", function () {
+        viewMonth++;
+        if (viewMonth > 11) { viewMonth = 0; viewYear++; }
+        render();
+      });
+      document.getElementById("calToday").addEventListener("click", function () {
+        viewYear = today.getFullYear();
+        viewMonth = today.getMonth();
+        selected = today;
+        render();
+        showDetail(today);
+      });
+
+      /* Start on the month of the next meeting, with its details open */
+      viewYear = selected.getFullYear();
+      viewMonth = selected.getMonth();
+      render();
+      showDetail(selected);
+    })();
+  </script>
+</body>
+</html>
