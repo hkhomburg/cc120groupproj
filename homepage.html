@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Roll &amp; Rally | University Board Games Club</title>
+  <meta name="description" content="Roll & Rally is the board games club for university students. Come play, chill, and meet your people.">
+  <link rel="stylesheet" href="stylesheet.css">
+  <script>
+    /* Apply saved settings before first paint to avoid a flash */
+    (function () {
+      try {
+        var theme = localStorage.getItem("theme");
+        if (!theme) {
+          theme = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+        document.documentElement.setAttribute("data-theme", theme);
+        if (localStorage.getItem("colorblind") === "on") {
+          document.documentElement.setAttribute("data-colorblind", "on");
+        }
+      } catch (e) {
+        document.documentElement.setAttribute("data-theme", "light");
+      }
+    })();
+  </script>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- FIXED NAVIGATION -->
+  <header class="site-header">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="homepage.html">
+        <span class="brand-icon" aria-hidden="true">♞</span>
+        <span class="brand-text">Roll &amp; Rally</span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="homepage.html" aria-current="page">Home</a></li>
+        <li><a href="homepage.html#games">Games</a></li>
+        <li><a href="homepage.html#join">Join</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <!-- SETTINGS COG -->
+      <div class="settings">
+        <button class="settings-btn" id="settingsBtn" aria-label="Open settings" aria-expanded="false" aria-controls="settingsPanel">
+          <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false">
+            <path fill="currentColor" d="M19.43 12.98c.04-.32.07-.65.07-.98s-.03-.66-.07-.98l2.11-1.65a.5.5 0 0 0 .12-.64l-2-3.46a.5.5 0 0 0-.61-.22l-2.49 1a7.3 7.3 0 0 0-1.69-.98l-.38-2.65A.49.49 0 0 0 14 2h-4a.49.49 0 0 0-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1a.5.5 0 0 0-.61.22l-2 3.46a.5.5 0 0 0 .12.64l2.11 1.65c-.04.32-.07.65-.07.98s.03.66.07.98l-2.11 1.65a.5.5 0 0 0-.12.64l2 3.46c.13.22.39.31.61.22l2.49-1c.52.39 1.08.73 1.69.98l.38 2.65c.04.24.25.42.49.42h4c.24 0 .45-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.23.09.49 0 .61-.22l2-3.46a.5.5 0 0 0-.12-.64l-2.11-1.65zM12 15.5A3.5 3.5 0 1 1 12 8.5a3.5 3.5 0 0 1 0 7z"/>
+          </svg>
+        </button>
+
+        <div class="settings-panel" id="settingsPanel" role="dialog" aria-label="Settings" hidden>
+          <h2 class="settings-title">Settings</h2>
+
+          <button class="setting-option" id="themeToggle" type="button" aria-pressed="false">
+            <span class="setting-label">
+              <span class="setting-icon" id="themeIcon" aria-hidden="true">🌙</span>
+              <span id="themeLabel">Dark mode</span>
+            </span>
+            <span class="switch" aria-hidden="true"><span class="switch-knob"></span></span>
+          </button>
+
+          <button class="setting-option" id="colorblindToggle" type="button" aria-pressed="false">
+            <span class="setting-label">
+              <span class="setting-icon" aria-hidden="true">👁️</span>
+              <span>Colorblind mode: <strong id="cbState">Off</strong></span>
+            </span>
+            <span class="switch" aria-hidden="true"><span class="switch-knob"></span></span>
+          </button>
+
+          <p class="settings-note">Colorblind mode boosts contrast, adds borders, underlines, and patterns so nothing relies on color alone.</p>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <p class="eyebrow">University Board Games Club</p>
+        <h1>Log off. Roll up. <span class="highlight">Lock in.</span></h1>
+        <p class="hero-sub">Roll &amp; Rally is where campus gets cozy. Snacks, strategy, betrayal (the fun kind), and zero screen time. No experience needed, just good vibes.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#join">Join the club</a>
+          <a class="btn btn-secondary" href="#games">See the games</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- GAMES -->
+    <section class="section" id="games">
+      <div class="container">
+        <h2 class="section-title">This Week's Lineup</h2>
+        <p class="section-sub">Four games, infinite chaos. Pick your fighter.</p>
+
+        <div class="game-grid">
+
+          <article class="card game-card" data-pattern="1">
+            <div class="game-emoji" aria-hidden="true">♟️</div>
+            <h3>Chess</h3>
+            <ul class="tags" aria-label="Chess details">
+              <li>2 players</li>
+              <li>30+ min</li>
+              <li>Big brain</li>
+            </ul>
+            <p>The ultimate main character move. Plot your plan, flex your galaxy brain, and watch your opponent spiral when you pull off that fork. It's giving grandmaster. Beginners welcome, no cap.</p>
+          </article>
+
+          <article class="card game-card" data-pattern="2">
+            <div class="game-emoji" aria-hidden="true">🏚️</div>
+            <h3>Betrayal at House on the Hill</h3>
+            <ul class="tags" aria-label="Betrayal at House on the Hill details">
+              <li>3–6 players</li>
+              <li>60 min</li>
+              <li>Plot twist</li>
+            </ul>
+            <p>Explore a haunted mansion with your besties until someone turns on the group. Low-key iconic, extremely unhinged. Trust issues? You'll have them by the end. Main quest: don't get ghosted (literally).</p>
+          </article>
+
+          <article class="card game-card" data-pattern="3">
+            <div class="game-emoji" aria-hidden="true">🍭</div>
+            <h3>Candy Land</h3>
+            <ul class="tags" aria-label="Candy Land details">
+              <li>2–4 players</li>
+              <li>15 min</li>
+              <li>Zero stress</li>
+            </ul>
+            <p>Pure nostalgia, straight from your childhood. No strategy, just colors, sugar, and vibes. It's the ultimate midterm-week reset. Slay the Gumdrop Pass and feel like a kid again. Immaculate.</p>
+          </article>
+
+          <article class="card game-card" data-pattern="4">
+            <div class="game-emoji" aria-hidden="true">🪜</div>
+            <h3>Chutes and Ladders</h3>
+            <ul class="tags" aria-label="Chutes and Ladders details">
+              <li>2–4 players</li>
+              <li>20 min</li>
+              <li>Pure luck</li>
+            </ul>
+            <p>Climb up, slide down, repeat. Your rizz means nothing here because the dice run the show. It's the most dramatic comeback (or fall off) you'll see all week. Bestie, we're so back. Wait, we're so not.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- JOIN FORM -->
+    <section class="section section-alt" id="join">
+      <div class="container form-wrap">
+        <div class="form-intro">
+          <h2 class="section-title">Join the Club</h2>
+          <p class="section-sub">Drop your deets and we'll slide into your inbox with game night info. Tell us when you're free so we can lock in the vibes.</p>
+        </div>
+
+        <form class="card join-form" id="joinForm" novalidate>
+          <div class="field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" autocomplete="name" required>
+            <span class="error" id="nameError" role="alert"></span>
+          </div>
+
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@university.edu" autocomplete="email" required>
+            <span class="error" id="emailError" role="alert"></span>
+          </div>
+
+          <div class="field">
+            <label for="phone">Phone number</label>
+            <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" autocomplete="tel" inputmode="tel" required>
+            <span class="error" id="phoneError" role="alert"></span>
+          </div>
+
+          <fieldset class="field availability">
+            <legend>Calendar availability</legend>
+            <div class="avail-grid">
+              <div>
+                <label for="availDate">Earliest date you're free</label>
+                <input type="date" id="availDate" name="availDate" required>
+              </div>
+              <div>
+                <label for="availStart">From</label>
+                <input type="time" id="availStart" name="availStart" value="18:00" required>
+              </div>
+              <div>
+                <label for="availEnd">Until</label>
+                <input type="time" id="availEnd" name="availEnd" value="21:00" required>
+              </div>
+            </div>
+            <span class="error" id="availError" role="alert"></span>
+          </fieldset>
+
+          <button class="btn btn-primary btn-block" type="submit">Count me in</button>
+          <p class="form-success" id="formSuccess" role="status" hidden>You're on the list! Watch your inbox for game night deets. 🎲</p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 Roll &amp; Rally Board Games Club</p>
+      <p><a href="about.html">About</a> &middot; <a href="contact.html">Contact</a></p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var root = document.documentElement;
+
+      function save(key, value) {
+        try { localStorage.setItem(key, value); } catch (e) {}
+      }
+
+      /* Mobile menu */
+      var menuToggle = document.getElementById("menuToggle");
+      var navLinks = document.getElementById("navLinks");
+      menuToggle.addEventListener("click", function () {
+        var open = navLinks.classList.toggle("open");
+        menuToggle.setAttribute("aria-expanded", String(open));
+      });
+      navLinks.addEventListener("click", function (e) {
+        if (e.target.tagName === "A") {
+          navLinks.classList.remove("open");
+          menuToggle.setAttribute("aria-expanded", "false");
+        }
+      });
+
+      /* Settings panel */
+      var settingsBtn = document.getElementById("settingsBtn");
+      var panel = document.getElementById("settingsPanel");
+
+      function setPanel(open) {
+        panel.hidden = !open;
+        settingsBtn.setAttribute("aria-expanded", String(open));
+        settingsBtn.classList.toggle("spin", open);
+      }
+      settingsBtn.addEventListener("click", function (e) {
+        e.stopPropagation();
+        setPanel(panel.hidden);
+      });
+      document.addEventListener("click", function (e) {
+        if (!panel.hidden && !panel.contains(e.target)) setPanel(false);
+      });
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape" && !panel.hidden) {
+          setPanel(false);
+          settingsBtn.focus();
+        }
+      });
+
+      /* Dark / light toggle */
+      var themeToggle = document.getElementById("themeToggle");
+      var themeLabel = document.getElementById("themeLabel");
+      var themeIcon = document.getElementById("themeIcon");
+
+      function syncTheme() {
+        var dark = root.getAttribute("data-theme") === "dark";
+        themeToggle.setAttribute("aria-pressed", String(dark));
+        themeLabel.textContent = dark ? "Light mode" : "Dark mode";
+        themeIcon.textContent = dark ? "☀️" : "🌙";
+      }
+      themeToggle.addEventListener("click", function () {
+        var next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+        root.setAttribute("data-theme", next);
+        save("theme", next);
+        syncTheme();
+      });
+      syncTheme();
+
+      /* Colorblind toggle */
+      var cbToggle = document.getElementById("colorblindToggle");
+      var cbState = document.getElementById("cbState");
+
+      function syncCb() {
+        var on = root.getAttribute("data-colorblind") === "on";
+        cbToggle.setAttribute("aria-pressed", String(on));
+        cbState.textContent = on ? "On" : "Off";
+      }
+      cbToggle.addEventListener("click", function () {
+        var on = root.getAttribute("data-colorblind") === "on";
+        if (on) {
+          root.removeAttribute("data-colorblind");
+          save("colorblind", "off");
+        } else {
+          root.setAttribute("data-colorblind", "on");
+          save("colorblind", "on");
+        }
+        syncCb();
+      });
+      syncCb();
+
+      /* Form: default date = today, simple validation */
+      var dateInput = document.getElementById("availDate");
+      var today = new Date();
+      var iso = today.getFullYear() + "-" +
+        String(today.getMonth() + 1).padStart(2, "0") + "-" +
+        String(today.getDate()).padStart(2, "0");
+      dateInput.min = iso;
+
+      var form = document.getElementById("joinForm");
+      var success = document.getElementById("formSuccess");
+
+      function setError(id, msg) {
+        document.getElementById(id).textContent = msg;
+      }
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        var ok = true;
+        var name = form.name.value.trim();
+        var email = form.email.value.trim();
+        var phone = form.phone.value.trim();
+
+        setError("nameError", "");
+        setError("emailError", "");
+        setError("phoneError", "");
+        setError("availError", "");
+        success.hidden = true;
+
+        if (name.length < 2) { setError("nameError", "Drop your name so we know who you are."); ok = false; }
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { setError("emailError", "That email doesn't look quite right."); ok = false; }
+        if (phone.replace(/\D/g, "").length < 10) { setError("phoneError", "We need a 10-digit phone number."); ok = false; }
+        if (!form.availDate.value) {
+          setError("availError", "Pick a date you're free.");
+          ok = false;
+        } else if (form.availEnd.value <= form.availStart.value) {
+          setError("availError", "End time needs to be after start time.");
+          ok = false;
+        }
+
+        if (ok) {
+          success.hidden = false;
+          form.reset();
+          form.availStart.value = "18:00";
+          form.availEnd.value = "21:00";
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
