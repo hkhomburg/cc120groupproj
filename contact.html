@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | Roll &amp; Rally Board Games Club</title>
+  <meta name="description" content="Meet the founders of Roll & Rally and find your place in the Clown Hierarchy.">
+  <link rel="stylesheet" href="stylesheet.css">
+  <script>
+    /* Apply saved settings before first paint to avoid a flash */
+    (function () {
+      try {
+        var theme = localStorage.getItem("theme");
+        if (!theme) {
+          theme = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+        document.documentElement.setAttribute("data-theme", theme);
+        if (localStorage.getItem("colorblind") === "on") {
+          document.documentElement.setAttribute("data-colorblind", "on");
+        }
+      } catch (e) {
+        document.documentElement.setAttribute("data-theme", "light");
+      }
+    })();
+  </script>
+</head>
+<body class="circus">
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- FIXED NAVIGATION -->
+  <header class="site-header">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="homepage.html">
+        <span class="brand-icon" aria-hidden="true">♞</span>
+        <span class="brand-text">Roll &amp; Rally</span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="homepage.html">Home</a></li>
+        <li><a href="homepage.html#games">Games</a></li>
+        <li><a href="homepage.html#join">Join</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+      </ul>
+
+      <!-- SETTINGS COG -->
+      <div class="settings">
+        <button class="settings-btn" id="settingsBtn" aria-label="Open settings" aria-expanded="false" aria-controls="settingsPanel">
+          <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false">
+            <path fill="currentColor" d="M19.43 12.98c.04-.32.07-.65.07-.98s-.03-.66-.07-.98l2.11-1.65a.5.5 0 0 0 .12-.64l-2-3.46a.5.5 0 0 0-.61-.22l-2.49 1a7.3 7.3 0 0 0-1.69-.98l-.38-2.65A.49.49 0 0 0 14 2h-4a.49.49 0 0 0-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1a.5.5 0 0 0-.61.22l-2 3.46a.5.5 0 0 0 .12.64l2.11 1.65c-.04.32-.07.65-.07.98s.03.66.07.98l-2.11 1.65a.5.5 0 0 0-.12.64l2 3.46c.13.22.39.31.61.22l2.49-1c.52.39 1.08.73 1.69.98l.38 2.65c.04.24.25.42.49.42h4c.24 0 .45-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.23.09.49 0 .61-.22l2-3.46a.5.5 0 0 0-.12-.64l-2.11-1.65zM12 15.5A3.5 3.5 0 1 1 12 8.5a3.5 3.5 0 0 1 0 7z"/>
+          </svg>
+        </button>
+
+        <div class="settings-panel" id="settingsPanel" role="dialog" aria-label="Settings" hidden>
+          <h2 class="settings-title">Settings</h2>
+
+          <button class="setting-option" id="themeToggle" type="button" aria-pressed="false">
+            <span class="setting-label">
+              <span class="setting-icon" id="themeIcon" aria-hidden="true">🌙</span>
+              <span id="themeLabel">Dark mode</span>
+            </span>
+            <span class="switch" aria-hidden="true"><span class="switch-knob"></span></span>
+          </button>
+
+          <button class="setting-option" id="colorblindToggle" type="button" aria-pressed="false">
+            <span class="setting-label">
+              <span class="setting-icon" aria-hidden="true">👁️</span>
+              <span>Colorblind mode: <strong id="cbState">Off</strong></span>
+            </span>
+            <span class="switch" aria-hidden="true"><span class="switch-knob"></span></span>
+          </button>
+
+          <p class="settings-note">Colorblind mode boosts contrast, adds borders, underlines, and patterns so nothing relies on color alone.</p>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- HERO -->
+    <section class="hero page-hero circus-hero">
+      <div class="container hero-inner">
+        <div class="hero-panel">
+          <p class="eyebrow">🎪 Contact &amp; crew</p>
+          <h1>Step right up to the <span class="highlight">big top!</span></h1>
+          <p class="hero-sub">Meet the three clowns who started this whole circus. Ladies, gentlemen, and fellow gamers, please keep your hands and dice inside the ring at all times.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="homepage.html#join">Join the circus</a>
+            <a class="btn btn-secondary" href="#hierarchy">See the hierarchy</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOUNDER PROFILES -->
+    <section class="section" id="founders">
+      <div class="container">
+        <h2 class="section-title">The Founding Clowns</h2>
+        <p class="section-sub">Three original creators, three very different game faces.</p>
+
+        <div class="profile-grid">
+
+          <!-- Hannah -->
+          <article class="card profile p-red" aria-labelledby="hannahName">
+            <header class="profile-top">
+              <div class="avatar" aria-hidden="true">🎩</div>
+              <h3 id="hannahName">Hannah Homburg</h3>
+              <p class="rank-badge"><span aria-hidden="true">★</span> Grand Ringmaster</p>
+            </header>
+            <div class="profile-body">
+              <p class="rank-line"><strong>Clown Hierarchy:</strong> Tier 1 of 5</p>
+
+              <h4>Gaming background</h4>
+              <p>Grew up with a game closet that was basically a library. Got hooked on strategy games early and has been running the table at family game nights ever since. Brings the organized energy, and the snacks.</p>
+
+              <h4>Top board game picks</h4>
+              <ol class="picks">
+                <li>Chess</li>
+                <li>Catan</li>
+                <li>Codenames</li>
+              </ol>
+
+              <h4>Why this rank?</h4>
+              <p>Keeps the whole show running on time while somehow looking unbothered. Wears the top hat. Controls the whistle.</p>
+
+              <h4>Email</h4>
+              <p class="email-line"><span aria-hidden="true">✉️</span> <a href="mailto:hkhomburg@ksu.edu">hkhomburg@ksu.edu</a></p>
+            </div>
+          </article>
+
+          <!-- Ian -->
+          <article class="card profile p-blue" aria-labelledby="ianName">
+            <header class="profile-top">
+              <div class="avatar" aria-hidden="true">🤹</div>
+              <h3 id="ianName">Ian Godines</h3>
+              <p class="rank-badge"><span aria-hidden="true">★</span> Chief Juggler</p>
+            </header>
+            <div class="profile-body">
+              <p class="rank-line"><strong>Clown Hierarchy:</strong> Tier 2 of 5</p>
+
+              <h4>Gaming background</h4>
+              <p>A lifelong fan of games with a twist, especially the ones where friendships get tested. Started with the classics, leveled up to full-on spooky campaigns, and now can't resist a good plot twist.</p>
+
+              <h4>Top board game picks</h4>
+              <ol class="picks">
+                <li>Betrayal at House on the Hill</li>
+                <li>Clue</li>
+                <li>Ticket to Ride</li>
+              </ol>
+
+              <h4>Why this rank?</h4>
+              <p>Can keep ten rules, six players, and one suspicious traitor in the air at the same time. Has never dropped the dice (that we know of).</p>
+
+              <h4>Email</h4>
+              <p class="email-line"><span aria-hidden="true">✉️</span> <a href="mailto:godines@ksu.edu">godines@ksu.edu</a></p>
+            </div>
+          </article>
+
+          <!-- Maddox -->
+          <article class="card profile p-yellow" aria-labelledby="maddoxName">
+            <header class="profile-top">
+              <div class="avatar" aria-hidden="true">🤡</div>
+              <h3 id="maddoxName">Maddox Dorland</h3>
+              <p class="rank-badge"><span aria-hidden="true">★</span> Head Clown</p>
+            </header>
+            <div class="profile-body">
+              <p class="rank-line"><strong>Clown Hierarchy:</strong> Tier 3 of 5</p>
+
+              <h4>Gaming background</h4>
+              <p>Proudly casual and here for the laughs. Cut his teeth on childhood favorites and still believes no game night is complete without at least one dramatic sore loser (usually him). Chaos is his love language.</p>
+
+              <h4>Top board game picks</h4>
+              <ol class="picks">
+                <li>Candy Land</li>
+                <li>Chutes and Ladders</li>
+                <li>Uno</li>
+              </ol>
+
+              <h4>Why this rank?</h4>
+              <p>Gets the biggest laugh in the room, every time. Honking is optional but strongly encouraged.</p>
+
+              <h4>Email</h4>
+              <p class="email-line"><span aria-hidden="true">✉️</span> <a href="mailto:mgdorland@ksu.edu">mgdorland@ksu.edu</a></p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CLOWN HIERARCHY -->
+    <section class="section section-alt" id="hierarchy">
+      <div class="container">
+        <h2 class="section-title">The Clown Hierarchy</h2>
+        <p class="section-sub">Every circus needs structure. Here's how the big top is organized, from top hat to red nose.</p>
+
+        <ol class="ladder">
+          <li class="rung" style="--w: 52%">
+            <span class="rung-tier">Tier 1</span>
+            <span class="rung-name">🎩 Grand Ringmaster</span>
+            <span class="rung-who">Hannah Homburg</span>
+          </li>
+          <li class="rung" style="--w: 64%">
+            <span class="rung-tier">Tier 2</span>
+            <span class="rung-name">🤹 Chief Juggler</span>
+            <span class="rung-who">Ian Godines</span>
+          </li>
+          <li class="rung" style="--w: 76%">
+            <span class="rung-tier">Tier 3</span>
+            <span class="rung-name">🤡 Head Clown</span>
+            <span class="rung-who">Maddox Dorland</span>
+          </li>
+          <li class="rung rung-open" style="--w: 88%">
+            <span class="rung-tier">Tier 4</span>
+            <span class="rung-name">🎪 Unicycle Strategist</span>
+            <span class="rung-who">Earned by regulars</span>
+          </li>
+          <li class="rung rung-open" style="--w: 100%">
+            <span class="rung-tier">Tier 5</span>
+            <span class="rung-name">🎈 Rookie Clown</span>
+            <span class="rung-who">Where every new member starts</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section">
+      <div class="container">
+        <div class="card cta-card">
+          <h2>Ready to run away and join the circus?</h2>
+          <p>Fill out the sign-up form on the homepage and we'll slide into your inbox with the next game night. Everybody starts as a Rookie Clown, and the ladder is climbable.</p>
+          <a class="btn btn-primary" href="homepage.html#join">Sign me up</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 Roll &amp; Rally Board Games Club</p>
+      <p><a href="about.html">About</a> &middot; <a href="contact.html">Contact</a></p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var root = document.documentElement;
+
+      function save(key, value) {
+        try { localStorage.setItem(key, value); } catch (e) {}
+      }
+
+      /* Mobile menu */
+      var menuToggle = document.getElementById("menuToggle");
+      var navLinks = document.getElementById("navLinks");
+      menuToggle.addEventListener("click", function () {
+        var open = navLinks.classList.toggle("open");
+        menuToggle.setAttribute("aria-expanded", String(open));
+      });
+      navLinks.addEventListener("click", function (e) {
+        if (e.target.tagName === "A") {
+          navLinks.classList.remove("open");
+          menuToggle.setAttribute("aria-expanded", "false");
+        }
+      });
+
+      /* Settings panel */
+      var settingsBtn = document.getElementById("settingsBtn");
+      var panel = document.getElementById("settingsPanel");
+
+      function setPanel(open) {
+        panel.hidden = !open;
+        settingsBtn.setAttribute("aria-expanded", String(open));
+        settingsBtn.classList.toggle("spin", open);
+      }
+      settingsBtn.addEventListener("click", function (e) {
+        e.stopPropagation();
+        setPanel(panel.hidden);
+      });
+      document.addEventListener("click", function (e) {
+        if (!panel.hidden && !panel.contains(e.target)) setPanel(false);
+      });
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape" && !panel.hidden) {
+          setPanel(false);
+          settingsBtn.focus();
+        }
+      });
+
+      /* Dark / light toggle */
+      var themeToggle = document.getElementById("themeToggle");
+      var themeLabel = document.getElementById("themeLabel");
+      var themeIcon = document.getElementById("themeIcon");
+
+      function syncTheme() {
+        var dark = root.getAttribute("data-theme") === "dark";
+        themeToggle.setAttribute("aria-pressed", String(dark));
+        themeLabel.textContent = dark ? "Light mode" : "Dark mode";
+        themeIcon.textContent = dark ? "☀️" : "🌙";
+      }
+      themeToggle.addEventListener("click", function () {
+        var next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+        root.setAttribute("data-theme", next);
+        save("theme", next);
+        syncTheme();
+      });
+      syncTheme();
+
+      /* Colorblind toggle */
+      var cbToggle = document.getElementById("colorblindToggle");
+      var cbState = document.getElementById("cbState");
+
+      function syncCb() {
+        var on = root.getAttribute("data-colorblind") === "on";
+        cbToggle.setAttribute("aria-pressed", String(on));
+        cbState.textContent = on ? "On" : "Off";
+      }
+      cbToggle.addEventListener("click", function () {
+        var on = root.getAttribute("data-colorblind") === "on";
+        if (on) {
+          root.removeAttribute("data-colorblind");
+          save("colorblind", "off");
+        } else {
+          root.setAttribute("data-colorblind", "on");
+          save("colorblind", "on");
+        }
+        syncCb();
+      });
+      syncCb();
+    })();
+  </script>
+</body>
+</html>
